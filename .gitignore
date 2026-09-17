@@ -1,0 +1,47 @@
+# ===== Build =====
+bin/
+obj/
+
+# ===== Distribuição — os zips de release ficam versionados no repositório =====
+# (pasta dist/ do projeto original NÃO vai para cá; só os zips já prontos)
+
+# ===== Dados locais do usuário — nunca versionar =====
+roms/
+bios/
+saves/
+*.sav
+*.srm
+*.state
+*.gba
+*.sfc
+*.smc
+*.snes
+*.nes
+*.unf
+*.unif
+*.md
+*.gen
+*.smd
+*.gb
+*.gbc
+gba_bios.bin
+
+# ===== Sistema / editores =====
+.DS_Store
+Thumbs.db
+*.user
+*.suo
+
+# ===== Pastas de trabalho locais =====
+.obsidian/
+.opencode/
+.claude/
+.agents/
+.copilot/
+.smart-env/
+.space/
+.trash/
+prompts/
+Mapas/
+Tags/
+copilot/
