@@ -27,35 +27,54 @@ Os módulos disponíveis:
 
 ---
 
-## 📦 Qual pacote baixar?
-
-Tudo fica na raiz deste repositório (e também na aba **Releases**, quando houver). Escolha conforme a sua situação:
-
-### 🆕 Nunca instalei o mod → baixe o **All-in-One**
-`FliperamaExpanded-AllInOne-0.2.0.zip` — vem com o host + **todos** os módulos **e as pastas `roms/`, `bios/`, `saves/` já criadas**. É a opção mais fácil: instala uma vez e tem tudo.
-
-### 🧑‍🌾 Vim do Nexus Mods (já tenho o host instalado)
-Você já tem o FliperamaExpanded (economia/Prairie King) pelo Nexus. Agora só falta escolher como quer os jogos retrô:
-
-- **Quero tudo, sem complicação** → baixe o **All-in-One** e extraia por cima da pasta antiga (substitui pela versão completa).
-- **Quero só alguns consoles** → baixe os **módulos avulsos** de que gostar (ex.: só `FliperamaExpanded.Module.GBA-0.2.0.zip`). Cada módulo se instala sozinho, sem mexer no host.
-
-> 💡 A economia, as fichas e o Prairie King pago funcionam **com ou sem** módulos. Os módulos são um extra à parte.
-
----
-
-## 🛠️ Instalação (passo a passo)
+## 📦 Como instalar
 
 > Requisitos: **Stardew Valley 1.6+** e **SMAPI 4.0+** (se não tem o SMAPI, instale primeiro — é o "carregador de mods" do jogo).
 
-**1. Encontre a pasta `Mods` do jogo**
+### ✅ Jeito recomendado: use o instalador
 
-No Linux (Steam): `~/.steam/steam/steamapps/common/Stardew Valley/Mods`
-No Windows (Steam): `C:\Arquivos de Programas (x86)\Steam\steamapps\common\Stardew Valley\Mods`
+Baixe o instalador da sua plataforma (arquivos na raiz deste repositório) e execute:
 
-**2. Extraia o zip**
+| Plataforma | Arquivo |
+| --- | --- |
+| Windows | `FliperamaExpanded.Installer.exe` |
+| Linux | `FliperamaExpanded.Installer` |
 
-O zip já contém a pasta `FliperamaExpanded` (com `dll`, `assets`, `i18n`, `manifest.json` e — no All-in-One — as pastas `roms/`, `bios/`, `saves/` e `modules/` já criadas). No final deve ficar assim:
+No Linux, dê permissão de execução antes:
+
+```bash
+chmod +x FliperamaExpanded.Installer
+./FliperamaExpanded.Installer
+```
+
+O instalador faz tudo sozinho:
+
+1. **Encontra o Stardew Valley** (Steam/GOG) — ou você informa a pasta;
+2. mostra os consoles e você **escolhe só os que quiser**;
+3. **baixa os módulos direto deste repositório**, confere a **integridade (SHA-256)** e instala no lugar certo;
+4. cria as pastas `roms/`, `bios/` e `saves/` dos consoles escolhidos (sem mexer em nada que já exista).
+
+> 💡 O instalador baixa somente o binário **da sua plataforma** — nunca mistura Linux e Windows.
+
+### 🧰 Instalação manual (zips)
+
+Se preferir na mão, use os pacotes da raiz deste repositório. **Escolha sempre o pacote da sua plataforma** (`-win-x64` ou `-linux-x64`):
+
+| Situação | Pacote |
+| --- | --- |
+| Primeira vez, quero tudo | `FliperamaExpanded-AllInOne-<plat>-0.2.0.zip` |
+| Já tenho o host (ex.: Nexus) e quero um console | `FliperamaExpanded.Module.<Console>-<plat>-0.2.0.zip` |
+| Só o host | `FliperamaExpanded-0.2.0.zip` |
+
+> ⚠️ Os pacotes são separados **por plataforma de propósito**: um zip nunca mistura `.so` (Linux) com `.dll` (Windows).
+
+---
+
+## 🛠️ Instalação manual, passo a passo
+
+**1. Extraia o zip**
+
+O zip contém a pasta `FliperamaExpanded` (com `dll`, `assets`, `i18n`, `manifest.json` e, nos módulos, `modules/{console}/`). O resultado final:
 
 ```text
 Mods/
@@ -72,24 +91,24 @@ Mods/
 ```
 
 > ⚠️ **Linux: evite "pasta com subpasta" (o clássico `FliperamaExpanded/FliperamaExpanded/`).**
-> O que acontece: seu gerenciador de arquivos cria uma pasta com o nome do zip ao extrair. Não é bug do mod — é comportamento do Ark/file-roller/nautilus.
+> Seu gerenciador de arquivos cria uma pasta com o nome do zip ao extrair. Não é bug do mod — é comportamento do Ark/file-roller/nautilus.
 >
 > **Do jeito certo:** extraia o zip em **qualquer lugar** (ex.: `Downloads`) e depois **mova a pasta `FliperamaExpanded` que aparece para dentro de `Mods/`**.
 >
 > ```text
-> Downloads/FliperamaExpanded-AllInOne-0.2.0/   ← o que o gerenciador cria
-> └── FliperamaExpanded/                        ← PASSO ESTA pasta p/ Mods/
+> Downloads/FliperamaExpanded-AllInOne-linux-x64-0.2.0/   ← o que o gerenciador cria
+> └── FliperamaExpanded/                                  ← PASSO ESTA pasta p/ Mods/
 > ```
 >
-> ⚠️ Se você já tinha o FliperamaExpanded instalado (ex.: versão do Nexus), **pode extrair por cima** — os arquivos são substituídos, nada se quebra. No Linux, se o gerenciador reclamar, apague a pasta antiga e extraia a nova no lugar.
+> ⚠️ Se você já tinha o FliperamaExpanded instalado (ex.: versão do Nexus), **pode extrair por cima** — os arquivos são substituídos, nada se quebra.
 
-**3. Rode o jogo pelo SMAPI**
+**2. Rode o jogo pelo SMAPI**
 
 O mod cria o arquivo `config.json` na primeira execução. Você verá no log do SMAPI quantos módulos foram carregados (ex.: *"5 module(s) loaded"*).
 
-**4. Coloque seus jogos (ROMs)**
+**3. Coloque seus jogos (ROMs)**
 
-As pastas já vêm criadas no All-in-One (ou são criadas sozinhas na primeira execução, se você instalou só o host). É só colocar os arquivos:
+As pastas já vêm criadas no All-in-One / pelo instalador (ou são criadas sozinhas na primeira execução, se você instalou só o host). É só colocar os arquivos:
 
 ```text
 Mods/FliperamaExpanded/roms/
@@ -100,7 +119,7 @@ Mods/FliperamaExpanded/roms/
 └── gameboy/    ← seus jogos .gb / .gbc
 ```
 
-**5. Jogue!**
+**4. Jogue!**
 
 Entre no Saloon a partir das **12:00** (o Gus liga as máquinas uma a uma) e interaja com uma máquina. **Compre fichas no balcão do Gus** (100 fichas por 1.000 ouros) e aproveite.
 
@@ -133,7 +152,7 @@ Use apenas **ROMs homebrew** (criadas por fãs, com licença livre) ou **backups
 **Não.** O emulador funciona sem ela (modo HLE). Se você tem a BIOS (dump do seu próprio hardware), coloque em `bios/gba/gba_bios.bin` para jogos com inicialização idêntica ao hardware — mas é opcional.
 **Funciona no Windows?**
 
-**Sim.** Cada módulo traz os dois núcleos nativos: `.so` (Linux) e `.dll` (Windows x64) — o mod escolhe o correto automaticamente. Testado no Windows e Linux (x64).
+**Sim.** No Windows use os pacotes `-win-x64` (ou o instalador `FliperamaExpanded.Installer.exe`) e no Linux os `-linux-x64`. Os núcleos nativos (`.dll`/`.so`) vêm separados por plataforma, então nunca há mistura. Testado no Windows e Linux (x64).
 
 **Funciona no macOS?**
 
@@ -141,6 +160,9 @@ Ainda não — os núcleos macOS (`.dylib`) serão acompanhados aqui quando disp
 
 **Funciona em multiplayer?**
 Sim — single-player e multiplayer (host e farmhands), com uma pessoa por máquina de cada vez.
+
+**Como atualizo para uma versão nova?**
+Rode o instalador de novo (ele baixa a versão mais recente) ou extraia o zip novo por cima. Suas ROMs e saves ficam intactos.
 
 **Como desinstalo?**
 Basta remover a pasta `Mods/FliperamaExpanded/`. O mod não altera nenhum arquivo do jogo.

@@ -1,0 +1,57 @@
+{
+  "version": "0.2.0",
+  "files": {
+    "FliperamaExpanded-0.2.0.zip": {
+      "sha256": "7879ff7b923b09cb2f59b5916c6c1a5810c6bfc79cb9c4ba86bcf6262234d0d8",
+      "size": 84113
+    },
+    "FliperamaExpanded-AllInOne-linux-x64-0.2.0.zip": {
+      "sha256": "336d1d49975cc5f1b32ea239971b1d97759cec73f5eda598bdc6ff596b2dc129",
+      "size": 4514819
+    },
+    "FliperamaExpanded-AllInOne-win-x64-0.2.0.zip": {
+      "sha256": "b918c50f7726039dcf0b1fb58bf7f66f9ae099eb57302a8f6c490c230fc93bfa",
+      "size": 4151968
+    },
+    "FliperamaExpanded.Module.GBA-linux-x64-0.2.0.zip": {
+      "sha256": "4c66630163d58d07dcd71c66a52e323d91791619aca3bbda8989ef67403b184d",
+      "size": 533220
+    },
+    "FliperamaExpanded.Module.GBA-win-x64-0.2.0.zip": {
+      "sha256": "ba7b2bf499882c2ab4c625079141fac3eb21a7bb6fc963c524206696deeaa396",
+      "size": 568885
+    },
+    "FliperamaExpanded.Module.GameBoy-linux-x64-0.2.0.zip": {
+      "sha256": "6d8473df5ad12316d49d3081fcb6f01d120140a6a2c435131403f84574877b1a",
+      "size": 558312
+    },
+    "FliperamaExpanded.Module.GameBoy-win-x64-0.2.0.zip": {
+      "sha256": "9bba9808fd0c46223e02bbfe4870a1e08be3964e5db3989982b45118a3dac1be",
+      "size": 485897
+    },
+    "FliperamaExpanded.Module.MegaDrive-linux-x64-0.2.0.zip": {
+      "sha256": "45c9a941a6b7fee572195b6ee9019aef4be25db2a51affe74a42950b336a7761",
+      "size": 1357764
+    },
+    "FliperamaExpanded.Module.MegaDrive-win-x64-0.2.0.zip": {
+      "sha256": "4cb7e0af2d54bc40231d560c2de9f6122964c153f9f925321e4ee0348754aa5b",
+      "size": 984451
+    },
+    "FliperamaExpanded.Module.NES-linux-x64-0.2.0.zip": {
+      "sha256": "8f7754af7fc5bf19d3341646207584dfc1a679bc9571eedca7a5ed3e4852fe51",
+      "size": 738164
+    },
+    "FliperamaExpanded.Module.NES-win-x64-0.2.0.zip": {
+      "sha256": "609ae4aaaaa953b61e830ff6a37c8ffe592c5bda8b1633736da345db66cf8cd6",
+      "size": 682389
+    },
+    "FliperamaExpanded.Module.SNES-linux-x64-0.2.0.zip": {
+      "sha256": "36e0c06a9531a7e8f4ee3d350ab18ac4874063a477f3125998fb32507fca00f5",
+      "size": 1237373
+    },
+    "FliperamaExpanded.Module.SNES-win-x64-0.2.0.zip": {
+      "sha256": "df61b133934cdbeef07d17cca9a29a2885c89389c9b7c45a0e327bcac1ce36e6",
+      "size": 1340360
+    }
+  }
+}
