@@ -32,7 +32,7 @@ Os módulos disponíveis:
 Tudo fica na raiz deste repositório (e também na aba **Releases**, quando houver). Escolha conforme a sua situação:
 
 ### 🆕 Nunca instalei o mod → baixe o **All-in-One**
-`FliperamaExpanded-AllInOne-0.2.0.zip` — vem com o host + **todos** os módulos. É a opção mais fácil: instala uma vez e tem tudo.
+`FliperamaExpanded-AllInOne-0.2.0.zip` — vem com o host + **todos** os módulos **e as pastas `roms/`, `bios/`, `saves/` já criadas**. É a opção mais fácil: instala uma vez e tem tudo.
 
 ### 🧑‍🌾 Vim do Nexus Mods (já tenho o host instalado)
 Você já tem o FliperamaExpanded (economia/Prairie King) pelo Nexus. Agora só falta escolher como quer os jogos retrô:
@@ -53,30 +53,43 @@ Você já tem o FliperamaExpanded (economia/Prairie King) pelo Nexus. Agora só 
 No Linux (Steam): `~/.steam/steam/steamapps/common/Stardew Valley/Mods`
 No Windows (Steam): `C:\Arquivos de Programas (x86)\Steam\steamapps\common\Stardew Valley\Mods`
 
-**2. Extraia o zip lá dentro**
+**2. Extraia o zip**
 
-Extraia **mantendo a pasta `FliperamaExpanded`** do zip. No final deve ficar assim:
+O zip já contém a pasta `FliperamaExpanded` (com `dll`, `assets`, `i18n`, `manifest.json` e — no All-in-One — as pastas `roms/`, `bios/`, `saves/` e `modules/` já criadas). No final deve ficar assim:
 
 ```text
 Mods/
 └── FliperamaExpanded/
     ├── FliperamaExpanded.dll       ← o host
+    ├── roms/                       ← onde vão seus jogos
+    ├── bios/                       ← BIOS opcional
+    ├── saves/                      ← saves automáticos
     ├── modules/                    ← só existe se você instalou módulos
     │   ├── gba/
     │   ├── snes/
     │   └── ...
-    └── ... 
+    └── ...
 ```
 
-> ⚠️ Se você já tinha o FliperamaExpanded instalado (ex.: versão do Nexus) e está instalando o All-in-One ou módulos novos, **pode extrair por cima** — os arquivos são substituídos, nada se quebra.
+> ⚠️ **Linux: evite "pasta com subpasta" (o clássico `FliperamaExpanded/FliperamaExpanded/`).**
+> O que acontece: seu gerenciador de arquivos cria uma pasta com o nome do zip ao extrair. Não é bug do mod — é comportamento do Ark/file-roller/nautilus.
+>
+> **Do jeito certo:** extraia o zip em **qualquer lugar** (ex.: `Downloads`) e depois **mova a pasta `FliperamaExpanded` que aparece para dentro de `Mods/`**.
+>
+> ```text
+> Downloads/FliperamaExpanded-AllInOne-0.2.0/   ← o que o gerenciador cria
+> └── FliperamaExpanded/                        ← PASSO ESTA pasta p/ Mods/
+> ```
+>
+> ⚠️ Se você já tinha o FliperamaExpanded instalado (ex.: versão do Nexus), **pode extrair por cima** — os arquivos são substituídos, nada se quebra. No Linux, se o gerenciador reclamar, apague a pasta antiga e extraia a nova no lugar.
 
 **3. Rode o jogo pelo SMAPI**
 
-Na primeira execução o mod cria as pastas de dados e o arquivo `config.json` sozinho. Você verá no log do SMAPI quantos módulos foram carregados (ex.: *"5 module(s) loaded"*).
+O mod cria o arquivo `config.json` na primeira execução. Você verá no log do SMAPI quantos módulos foram carregados (ex.: *"5 module(s) loaded"*).
 
 **4. Coloque seus jogos (ROMs)**
 
-Crie/vá até a pasta do console e coloque seus arquivos:
+As pastas já vêm criadas no All-in-One (ou são criadas sozinhas na primeira execução, se você instalou só o host). É só colocar os arquivos:
 
 ```text
 Mods/FliperamaExpanded/roms/
