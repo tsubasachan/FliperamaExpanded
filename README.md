@@ -131,9 +131,13 @@ Use apenas **ROMs homebrew** (criadas por fãs, com licença livre) ou **backups
 
 **Preciso da BIOS do Game Boy Advance?**
 **Não.** O emulador funciona sem ela (modo HLE). Se você tem a BIOS (dump do seu próprio hardware), coloque em `bios/gba/gba_bios.bin` para jogos com inicialização idêntica ao hardware — mas é opcional.
-
 **Funciona no Windows?**
-Os núcleos empacotados são compilados para **Linux x64**. Versões para Windows/macOS serão acompanhadas aqui quando disponíveis.
+
+**Sim.** Cada módulo traz os dois núcleos nativos: `.so` (Linux) e `.dll` (Windows x64) — o mod escolhe o correto automaticamente. Testado no Windows e Linux (x64).
+
+**Funciona no macOS?**
+
+Ainda não — os núcleos macOS (`.dylib`) serão acompanhados aqui quando disponíveis.
 
 **Funciona em multiplayer?**
 Sim — single-player e multiplayer (host e farmhands), com uma pessoa por máquina de cada vez.
@@ -164,7 +168,7 @@ Este repositório distribui **apenas os pacotes de release (binários)** — o c
 Se você é desenvolvedor:
 
 - Alvo: .NET 6 (`net6.0`), SMAPI 4.5.2, Stardew Valley 1.6.15 (testado no Linux).
-- Os núcleos nativos (`.so`) são Libretro: mGBA, Snes9x, FCEUmm, Genesis Plus GX e Gambatte.
+- Os núcleos nativos são Libretro — **Windows**: `_libretro.dll` (mGBA, Snes9x, FCEUmm, Genesis Plus GX, Gambatte) e **Linux**: `_libretro.so` (mesmos núcleos).
 - Reprodução dos pacotes: `dotnet build` + script de empacotamento geram exatamente os zips da raiz deste repositório.
 
 ---
