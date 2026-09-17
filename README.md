@@ -37,10 +37,10 @@ Baixe o instalador da sua plataforma (arquivos na raiz deste repositório) e exe
 
 | Plataforma | Arquivo |
 | --- | --- |
-| Windows | `FliperamaExpanded.Installer.exe` |
-| Linux | `FliperamaExpanded.Installer` |
+| Windows | `FliperamaExpanded.Installer-win-x64.zip` |
+| Linux | `FliperamaExpanded.Installer-linux-x64.zip` |
 
-No Linux, dê permissão de execução antes:
+Após baixar, **extraia o zip** em uma pasta qualquer e abra o instalador que está dentro (`FliperamaExpanded.Installer.exe` no Windows ou `FliperamaExpanded.Installer` no Linux). No Linux, dê permissão de execução antes:
 
 ```bash
 chmod +x FliperamaExpanded.Installer
